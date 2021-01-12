@@ -57,10 +57,3 @@ def test_waveform():
     T7 = np.max(Y) == 2
     
     return T0 and T1 and T2 and T3 and T4 and T5 and T6 and T7
-
-test_friedman_1()
-test_friedman_2()
-test_friedman_3()
-test_friedman_4()
-test_friedman_5()
-test_waveform()
