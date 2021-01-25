@@ -22,7 +22,7 @@ def friedman_1(N = 200, P = 10):
     mu = (dims + 1)**.5 / 2
     sd = 1 / (dims + 1)**.5
     X[N1:, :] = np.random.normal(mu, sd, [N2, P])
-    Y[N1] = 1
+    Y[N1:] = 1
     
     return X, Y
 
@@ -41,7 +41,7 @@ def friedman_2(N = 200, P = 10):
     mu = (P - (dims + 1) + 1)**.5 / 2
     sd = 1 / (dims + 1)**.5
     X[N1:, dims] = np.random.normal(mu, sd, [N2, P])
-    Y[N1] = 1
+    Y[N1:] = 1
     
     return X, Y
 
