@@ -17,11 +17,11 @@ def make_test_function(f):
         # Confirm shape change as expected
         X, Y = f(100, 5)
         T1 = X.shape == (100, 5)
-        T2 = Y.shape == (100, 1)
+        T2 = Y.shape == (100,)
         
         X, Y = f(501, 3)
         T3 = X.shape == (501, 3)
-        T4 = Y.shape == (501, 1)
+        T4 = Y.shape == (501,)
         
         # y contains a mix of 0s and 1s.
         T5 = np.mean(Y) > 0 and np.mean(Y) < 1
@@ -45,11 +45,11 @@ def test_waveform():
     # Confirm shape change as expected
     X, Y = ds.waveform(100)
     T1 = X.shape == (100, 4)
-    T2 = Y.shape == (100, 1)
+    T2 = Y.shape == (100,)
     
     X, Y = ds.waveform(301)
     T3 = X.shape == (301, 4)
-    T4 = Y.shape == (301, 1)
+    T4 = Y.shape == (301,)
     
     # y contains a mix of 0s, 1s, 2s.
     T5 = np.mean(Y) > 1 and np.mean(Y) < 1.1
